@@ -5,16 +5,19 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    background: #f7f9fc;
 }
 
 header {
-    background-color: #333;
+    background-color: #1e1e1e;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
 }
 
 nav {
@@ -27,7 +30,7 @@ nav {
 }
 
 nav .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 600;
 }
 
@@ -47,93 +50,150 @@ nav ul li a {
     text-decoration: none;
     font-weight: 600;
     padding: 10px;
-    transition: background 0.3s;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    color: #ff6f61;
+    border-bottom: 2px solid #ff6f61;
 }
 
 .section {
     padding: 80px 20px;
     text-align: center;
-    margin-top: 60px;
 }
 
-#home {
-    background-color: #ff577f;
+.hero {
+    background: linear-gradient(to right, #ff6f61, #ff9a8b);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-size: cover;
 }
 
-#portfolio, #skills, #services, #contact {
-    min-height: 100vh;
+.hero-content {
+    max-width: 700px;
 }
 
-#portfolio {
-    background-color: #ff884b;
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.cta {
+    background-color: #fff;
+    color: #ff6f61;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta:hover {
+    background-color: #ff6f61;
     color: #fff;
 }
 
-#skills {
-    background-color: #ffd84b;
-    color: #000;
+.about {
+    background-color: #ffffff;
+    color: #333;
 }
 
-#services {
-    background-color: #4bffb5;
-    color: #000;
-}
-
-#contact {
-    background-color: #4bafff;
-    color: #fff;
-}
-
-.content {
+.about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.showreel iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 315px;
+.about-container img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.portfolio {
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+.portfolio-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-showcase iframe {
     border: none;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: 315px;
 }
 
-.image-container {
+.portfolio-btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
     display: inline-block;
-    margin: 10px;
-    transition: transform 0.3s;
+    margin: 20px 0;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.image-container img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.image-container:hover {
+.portfolio-btn:hover {
+    background-color: #e55b4e;
     transform: scale(1.05);
 }
 
-.skill-list, .service-list {
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
 }
 
-.skill, .service {
-    background: rgba(255, 255, 255, 0.1);
+.gallery-item {
+    width: calc(33.333% - 20px);
+    margin: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.skills, .services, .testimonials, .contact {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.skills-list, .services-list, .testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill, .service, .testimonial {
+    background: #f9f9f9;
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
@@ -142,35 +202,28 @@ nav ul li a:hover {
     transition: transform 0.3s, background 0.3s;
 }
 
-.skill:hover, .service:hover {
+.skill:hover, .service:hover, .testimonial:hover {
     transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.2);
+    background: #eaeaea;
 }
 
-.portfolio-btn, .hire-me-btn, .cta {
-    background-color: black;
-    color: white;
+.hire-me-btn {
+    background-color: #1e1e1e;
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
-    display: inline-block;
-    margin: 10px 0;
-    transition: transform 0.3s;
     border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.portfolio-btn:hover, .hire-me-btn:hover, .cta:hover {
-    transform: scale(1.1);
+.hire-me-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
 }
 
 footer {
-    background-color: #333;
+    background-color: #1e1e1e;
     color: #fff;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
-}
-
-@media (min-width: 768px) {
-    .section {
-        padding: 100px 20px;
-    }
 }
