@@ -1,0 +1,176 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#home {
+    background-color: #ff577f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#portfolio, #skills, #services, #contact {
+    min-height: 100vh;
+}
+
+#portfolio {
+    background-color: #ff884b;
+    color: #fff;
+}
+
+#skills {
+    background-color: #ffd84b;
+    color: #000;
+}
+
+#services {
+    background-color: #4bffb5;
+    color: #000;
+}
+
+#contact {
+    background-color: #4bafff;
+    color: #fff;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.showreel iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 315px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.skill-list, .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill, .service {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.skill:hover, .service:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-btn, .hire-me-btn, .cta {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    transition: transform 0.3s;
+    border-radius: 5px;
+}
+
+.portfolio-btn:hover, .hire-me-btn:hover, .cta:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: 100px 20px;
+    }
+}
