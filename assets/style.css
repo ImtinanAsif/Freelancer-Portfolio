@@ -1488,33 +1488,7 @@ span {
 
 /* Skills section */
 
-.skills {
-    background: #f0f0f0; /* Assuming this is the background you want */
-    padding: 50px 0; /* Adjust padding as necessary */
-}
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* Add space between cards */
-}
-
-.skills .service-box {
-    flex: 1 1 calc(33.333% - 20px); /* Adjust width and margin */
-    margin-bottom: 20px; /* Add bottom margin for spacing between rows */
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-}
-
-.skills .service-info h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
-}
 
 .skills .skill-bar {
     position: relative;
