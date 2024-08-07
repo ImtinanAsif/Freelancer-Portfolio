@@ -1488,31 +1488,30 @@ span {
 
 /* Skills section */
 
-
-
-.skills .skill-bar {
-    position: relative;
-    height: 40px;
+.skill-bar {
     background: #ddd;
     border-radius: 10px;
     overflow: hidden;
     margin-top: 10px;
-}
-
-.skills .skill-progress {
-    height: 100%;
-    background: #3b82f6;
-    border-radius: 10px 0 0 10px;
     position: relative;
 }
 
-.skills .skill-percentage {
+.skill-progress {
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    width: 0;
+    transition: width 0.6s ease;
+}
+
+.skill-percentage {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 14px;
     color: #fff;
-    font-weight: bold;
 }
 
 }
+
