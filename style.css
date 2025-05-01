@@ -743,59 +743,7 @@ span {
 }
 
 
-/* Text Animation */
-.text-animation span {
-    display: inline-block;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column;
-        gap: 5rem;
-        text-align: center;
-        padding: 5rem 5%;
-    }
 
-    .home-content {
-        align-items: center;
-        margin-top: 0;
-    }
 
-    .home-content h1 {
-        font-size: 4rem;
-    }
-
-    .home-content h3 {
-        font-size: 2.5rem;
-    }
-
-    .home-content p {
-        font-size: 1.4rem;
-    }
-
-    .home-img img {
-        width: 60vw;
-        top: 0;
-    }
-
-    .btn-group {
-        flex-direction: column;
-    }
-
-    .btn-group a {
-        width: 100%;
-        text-align: center;
-    }
-}
