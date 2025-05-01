@@ -32,3 +32,20 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    let textElement = document.querySelector('.text-animation span');
+    let text = "Web Developer";  // Example text to animate
+    let index = 0;
+
+    function typeText() {
+        if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100); // Adjust speed of typing
+        }
+    }
+
+    typeText();
+});
