@@ -273,9 +273,6 @@ Let's create something amazing together!</p>
         <div class="input-group-2">
             <textarea id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
             <button type="button" class="btn" onclick="openGmail()">Send Message</button>
-        </div>
-    </form>
-</section>
 
 <script>
 function openGmail() {
@@ -285,13 +282,13 @@ function openGmail() {
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=emailimtinan@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        "Name: " + name + "\\nEmail: " + email + "\\nPhone: " + phone + "\\n\\nMessage:\\n" + message
-    )}`;
+    const body = `Name: ${name}%0DEmail: ${email}%0DPhone: ${phone}%0D%0DMessage:%0D${message}`;
+    const mailtoLink = `mailto:emailimtinan@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-    window.open(mailtoLink, "_blank");
+    window.location.href = mailtoLink;
 }
 </script>
+
 
 
     <!-- Footer Section -->
