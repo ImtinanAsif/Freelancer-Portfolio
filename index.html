@@ -343,6 +343,20 @@ function openEmail() {
     </footer>
 
     <script src="assets/script.js"></script>
+            <audio id="bg-music" src="assets/music.mp3" autoplay loop></audio>
+
+<script>
+  const bgMusic = document.getElementById("bg-music");
+  bgMusic.volume = 0.25;
+
+  // Optional: Prevent autoplay block on some browsers
+  document.addEventListener('click', () => {
+    if (bgMusic.paused) {
+      bgMusic.play();
+    }
+  }, { once: true });
+</script>
+
 </body>
 
 </html>
