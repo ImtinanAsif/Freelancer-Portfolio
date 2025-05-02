@@ -39,7 +39,7 @@ function openGmail() {
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=imtinan@example.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=emailimtinan@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
         "Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\n\nMessage:\n" + message
     )}`;
 
