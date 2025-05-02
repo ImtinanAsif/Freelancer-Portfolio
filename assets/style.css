@@ -1680,7 +1680,7 @@ span {
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1690,9 +1690,12 @@ span {
   border-radius: 1rem;
   border: none;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
 }
 
-/* Aspect Ratio Classes */
+/* Aspect Ratios */
 .video-vertical {
   aspect-ratio: 9 / 16;
 }
@@ -1703,4 +1706,10 @@ span {
 
 .video-medium {
   aspect-ratio: 4 / 5;
+}
+
+/* Animation Trigger */
+.reveal.active iframe {
+  opacity: 1;
+  transform: translateY(0);
 }
