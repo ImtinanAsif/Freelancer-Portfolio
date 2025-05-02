@@ -1670,3 +1670,37 @@ span {
     font-size: 1.6rem;
   }
 }
+
+/* Sneaky Peak Section */
+.sneaky-peak {
+  background: var(--second-bg-color);
+  padding: 8rem 5%;
+  text-align: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.video-grid iframe {
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Aspect Ratio Classes */
+.video-vertical {
+  aspect-ratio: 9 / 16;
+}
+
+.video-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.video-medium {
+  aspect-ratio: 4 / 5;
+}
