@@ -49,7 +49,6 @@ function openGmail() {
 }
 </script>
 
-<script>
 function revealOnScroll() {
   const reveals = document.querySelectorAll('.reveal');
   reveals.forEach(section => {
@@ -62,4 +61,4 @@ function revealOnScroll() {
   });
 }
 window.addEventListener('scroll', revealOnScroll);
-</script>
+window.addEventListener('load', revealOnScroll);
