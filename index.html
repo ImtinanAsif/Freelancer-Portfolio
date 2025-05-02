@@ -356,6 +356,47 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
                   </script>
 
+
+<!-- Social DM Section --><section id="contact-me-direct" class="contact-direct">
+  <h2 class="heading">Message <span>Me Directly</span></h2>  <!-- Discord Block -->  <div class="social-box discord reveal">
+    <div class="social-icon">
+      <i class='bx bxl-discord'></i>
+    </div>
+    <div class="social-info">
+      <h3>Discord</h3>
+      <p>@invisible_anonymous</p>
+      <textarea id="discordMsg" placeholder="Write your message..."></textarea>
+      <button class="btn" onclick="copyDiscordMessage()">Send DM</button>
+    </div>
+  </div>  <!-- Instagram Block -->  <div class="social-box instagram reveal">
+    <div class="social-icon">
+      <i class='bx bxl-instagram'></i>
+    </div>
+    <div class="social-info">
+      <h3>Instagram</h3>
+      <p><a href="https://www.instagram.com/imtinan_asif" target="_blank">@imtinan_asif</a></p>
+    </div>
+  </div>  <!-- Fiverr Block -->  <div class="social-box fiverr reveal">
+    <div class="social-icon">
+      <i class='bx bxl-fiverr'></i>
+    </div>
+    <div class="social-info">
+      <h3>Fiverr</h3>
+      <p><a href="https://www.fiverr.com/alyan_asif" target="_blank">Alyan Asif</a></p>
+    </div>
+  </div>
+</section><script>
+function copyDiscordMessage() {
+  const msg = document.getElementById("discordMsg").value;
+  if (!msg.trim()) return alert("Please enter a message first.");
+
+  navigator.clipboard.writeText(msg).then(() => {
+    alert("Message copied! Now paste it into Discord chat with @invisible_anonymous.");
+  });
+}
+</script>
+            
+            
     <!-- Footer Section -->
 
     <footer class="footer">
