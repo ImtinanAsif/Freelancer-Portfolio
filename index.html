@@ -272,27 +272,53 @@ Let's create something amazing together!</p>
 
         <div class="input-group-2">
             <textarea id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-<button type="button" class="btn" onclick="openSmartMail()">Send Message</button>
+<button type="button" class="btn" onclick="openEmail()">Send Message</button>
 
 <script>
-function openSmartMail() {
+function openEmail() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    const bodyText = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`;
-    const encodedBody = encodeURIComponent(bodyText);
-    const encodedSubject = encodeURIComponent(subject);
+    const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`;
+    const subjectEncoded = encodeURIComponent(subject);
+    const bodyEncoded = encodeURIComponent(body);
 
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
     if (isMobile) {
-        window.location.href = `mailto:emailimtinan@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+        // Instantly open default email app on mobile
+        window.location.href = `mailto:imtinan@example.com?subject=${subjectEncoded}&body=${bodyEncoded}`;
     } else {
-        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=emailimtinan@gmail.com&su=${encodedSubject}&body=${encodedBody}`;
-        window.open(gmailLink, "_blank");
+        // Ask desktop users to pick
+        const choice = prompt(`Choose email platform:\n1. Gmail\n2. Outlook\n3. Yahoo\n4. ProtonMail\n5. Default Email App\n(Type 1–5)`);
+
+        let url = "";
+
+        switch (choice) {
+            case "1":
+                url = `https://mail.google.com/mail/?view=cm&fs=1&to=emailimtinan@gmail.com&su=${subjectEncoded}&body=${bodyEncoded}`;
+                break;
+            case "2":
+                url = `https://outlook.office.com/mail/deeplink/compose?to=emailimtinan@gmail.com&subject=${subjectEncoded}&body=${bodyEncoded}`;
+                break;
+            case "3":
+                url = `https://compose.mail.yahoo.com/?to=emailimtinan@gmail.com&subj=${subjectEncoded}&body=${bodyEncoded}`;
+                break;
+            case "4":
+                alert("ProtonMail does not support compose via browser links. Use your mail app instead.");
+                return;
+            case "5":
+                url = `mailto:emailimtinan@gmail.com?subject=${subjectEncoded}&body=${bodyEncoded}`;
+                break;
+            default:
+                alert("Invalid choice. Please try again.");
+                return;
+        }
+
+        window.open(url, "_blank");
     }
 }
 </script>
