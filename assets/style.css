@@ -1732,3 +1732,72 @@ span {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+/* === Sneaky Peak Section Fix === */
+.sneaky-peak {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--second-bg-color);
+  padding: 8rem 5%;
+  text-align: center;
+}
+
+/* Fix Contact Section from overlapping */
+.contact {
+  clear: both;
+  width: 100%;
+}
+
+/* Responsive Grid Fix for Sneaky Peak */
+.video-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Mobile: vertical layout */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Desktop: horizontal layout */
+@media (min-width: 769px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Ensure iframe aspect ratios are enforced */
+.video-grid iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease-out;
+}
+
+/* Custom ratios */
+.video-vertical {
+  aspect-ratio: 9 / 16;
+}
+
+.video-medium {
+  aspect-ratio: 4 / 5;
+}
+
+.video-wide {
+  aspect-ratio: 16 / 9;
+}
+
+/* Optional Hover Effect */
+.video-grid iframe:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+  transform: translateY(-5px);
+}
