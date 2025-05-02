@@ -32,6 +32,9 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
+<button type="button" class="btn" onclick="openGmail()">Send Message</button>
+
+<script>
 function openGmail() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -39,9 +42,9 @@ function openGmail() {
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=emailimtinan@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        "Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\n\nMessage:\n" + message
-    )}`;
+    const body = `Name: ${name}%0DEmail: ${email}%0DPhone: ${phone}%0D%0DMessage:%0D${message}`;
+    const mailtoLink = `mailto:emailimtinan@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-    window.open(mailtoLink, "_blank");
+    window.location.href = mailtoLink;
 }
+</script>
