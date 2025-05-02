@@ -1680,9 +1680,22 @@ span {
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+}
+
+/* Mobile: vertical layout */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Desktop: horizontal layout */
+@media (min-width: 769px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 .video-grid iframe {
