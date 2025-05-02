@@ -48,3 +48,18 @@ function openGmail() {
     window.location.href = mailtoLink;
 }
 </script>
+
+<script>
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+  reveals.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    const height = window.innerHeight;
+
+    if (top < height - 100) {
+      section.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+</script>
