@@ -1769,3 +1769,48 @@ span {
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
   transform: translateY(-5px);
 }
+
+
+/* Sneaky Peak Section Styles */
+.sneaky-peak {
+  padding: 4rem 2rem;
+  background: #0d0d0d;
+  text-align: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.video-grid iframe {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  aspect-ratio: 9 / 16;
+}
+
+/* Customize specific ratios */
+.video-medium {
+  aspect-ratio: 4 / 5;
+}
+
+.video-vertical {
+  aspect-ratio: 9 / 16;
+}
+
+.video-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.video-grid iframe {
+  width: 100%;
+  max-width: 320px; /* 👈 limits size on large screens */
+  height: auto;
+  border-radius: 12px;
+  border: none;
+  aspect-ratio: 9 / 16;
+  margin: 0 auto; /* center them */
+}
