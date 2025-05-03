@@ -1684,19 +1684,6 @@ span {
   margin-top: 3rem;
 }
 
-/* Mobile: vertical layout */
-@media (max-width: 768px) {
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Desktop: horizontal layout */
-@media (min-width: 769px) {
-  .video-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
 
 .video-grid iframe {
   width: 100%;
@@ -1745,12 +1732,6 @@ span {
   text-align: center;
 }
 
-/* Fix Contact Section from overlapping */
-.contact {
-  clear: both;
-  width: 100%;
-}
-
 /* Responsive Grid Fix for Sneaky Peak */
 .video-grid {
   display: grid;
@@ -1758,19 +1739,6 @@ span {
   margin-top: 3rem;
 }
 
-/* Mobile: vertical layout */
-@media (max-width: 768px) {
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Desktop: horizontal layout */
-@media (min-width: 769px) {
-  .video-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
 
 /* Ensure iframe aspect ratios are enforced */
 .video-grid iframe {
