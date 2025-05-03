@@ -1789,7 +1789,7 @@ span {
   width: 100%;
   border-radius: 12px;
   border: none;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 16 / 9;
 }
 
 /* Customize specific ratios */
